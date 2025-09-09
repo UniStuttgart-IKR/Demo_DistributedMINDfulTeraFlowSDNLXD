@@ -1,4 +1,4 @@
-#Connectivity Intent between two nodes in different domains
+#Connectivity Intent between a node from domain 1 and a node from domain 3
 conintent_neigh = MINDF.ConnectivityIntent(MINDF.GlobalNode(UUID(1), 4), MINDF.GlobalNode(UUID(3), 47), u"100.0Gbps")
 intentuuid_neigh = MINDF.addintent!(ibnf1, conintent_neigh, MINDF.NetworkOperator())
 
@@ -16,3 +16,10 @@ ibnplot(ibnf1; multidomain=true, intentids = [intentuuid_neigh], shownodelabels 
 
 #Install the intent
 MINDF.installintent!(ibnf1, intentuuid_neigh; verbose=true)
+
+
+#Uninstall the intent
+MINDF.uninstallintent!(ibnf1, intentuuid_neigh)
+
+#Uncompile the intent
+MINDF.uncompileintent!(ibnf1, intentuuid_neigh)
