@@ -23,7 +23,7 @@ MINDF.installintent!(ibnf1, intentid; verbose=true)
 
 
 
-
+# MINDF.installintent!(ibnf3, UUID(0x1); verbose=true)
 
 
 #Check the low-level implementation of the intent
