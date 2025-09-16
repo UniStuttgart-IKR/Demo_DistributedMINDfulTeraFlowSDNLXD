@@ -15,12 +15,9 @@ using MINDFulTeraFlowSDN
 
 
 function initializewithTFS(configfile::String, tfs_ip::String)
-    push!(ARGS, configfile)
-    push!(ARGS, tfs_ip)
-    return MINDFulTeraFlowSDN.main()
+    return MINDFulTeraFlowSDN.main(; configfile = configfile, tfs_ip = tfs_ip)
 end
 
 function initializewithoutTFS(configfile::String)
-    push!(ARGS, configfile)
-    return MINDFul.main()
+    return MINDFul.main(; configfile = configfile)
 end
