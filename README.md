@@ -20,18 +20,18 @@ An example of the operation and ploting of a connectivity intent is provided in 
 3. Clone MINDFulTeraFlowSDN.jl repo
 4. Run with sudo the script "MINDFulTeraFlowSDN.jl/deploy-tfs/tfs-incus-distributed/tfs-lxd.sh"
 5. If successful rerun the script by passing a different name for the VM, e.g., `sudo VM_NAME="tfs-vm-2" bash ./tfs-lxd.sh`
-6. The two scripts must have created 2 incus instances. Check with `sudo incus list`. Output should be similar to:
-+----------+---------+-----------------------------+-----------------------------------------------+-----------------+-----------+
-|   NAME   |  STATE  |            IPV4             |                     IPV6                      |      TYPE       | SNAPSHOTS |
-+----------+---------+-----------------------------+-----------------------------------------------+-----------------+-----------+
-| tfs-vm   | RUNNING | 172.17.0.1 (docker0)        | fd42:c744:55:6f42:216:3eff:fe1a:9ebd (enp5s0) | VIRTUAL-MACHINE | 0         |
-|          |         | 10.1.105.64 (vxlan.calico)  |                                               |                 |           |
-|          |         | 10.0.100.49 (enp5s0)        |                                               |                 |           |
-+----------+---------+-----------------------------+-----------------------------------------------+-----------------+-----------+
-| tfs-vm-2 | RUNNING | 172.17.0.1 (docker0)        | fd42:c744:55:6f42:216:3eff:fe24:126 (enp5s0)  | VIRTUAL-MACHINE | 0         |
-|          |         | 10.1.178.128 (vxlan.calico) |                                               |                 |           |
-|          |         | 10.0.100.156 (enp5s0)       |                                               |                 |           |
-+----------+---------+-----------------------------+-----------------------------------------------+-----------------+-----------+
+6. The two scripts must have created 2 incus instances. Check with `sudo incus list`. Output should be similar to:\
++----------+---------+-----------------------------+-----------------------------------------------+-----------------+-----------+\
+|   NAME   |  STATE  |            IPV4             |                     IPV6                      |      TYPE       | SNAPSHOTS |\
++----------+---------+-----------------------------+-----------------------------------------------+-----------------+-----------+\
+| tfs-vm   | RUNNING | 172.17.0.1 (docker0)        | fd42:c744:55:6f42:216:3eff:fe1a:9ebd (enp5s0) | VIRTUAL-MACHINE | 0         |\
+|          |         | 10.1.105.64 (vxlan.calico)  |                                               |                 |           |\
+|          |         | 10.0.100.49 (enp5s0)        |                                               |                 |           |\
++----------+---------+-----------------------------+-----------------------------------------------+-----------------+-----------+\
+| tfs-vm-2 | RUNNING | 172.17.0.1 (docker0)        | fd42:c744:55:6f42:216:3eff:fe24:126 (enp5s0)  | VIRTUAL-MACHINE | 0         |\
+|          |         | 10.1.178.128 (vxlan.calico) |                                               |                 |           |\
+|          |         | 10.0.100.156 (enp5s0)       |                                               |                 |           |\
++----------+---------+-----------------------------+-----------------------------------------------+-----------------+-----------+\
 7. Check the webui works, by copy/pasting the vxlan.calico address of every VM in the browser and appending "/webui". e.g. "http://10.0.100.49/webui"
 
 #### Start MINDFul
