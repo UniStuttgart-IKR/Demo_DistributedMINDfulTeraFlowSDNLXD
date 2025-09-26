@@ -70,3 +70,5 @@ Now you are inside the view of the SDN controller.
 
 You can search in TeraFlow for all the other devices configured by looking at the `intentplot` to find which devices are impacted.\
 You can experiment with restarting the incus images and MINDFul to confirm that everything is rigidly in place.
+
+_* Disclaimer: The upper experiment requires significant RAM. If this is an issue, try running without setting up "tfs-vm-2" and instead using 2 Dummy SDN controllers_
